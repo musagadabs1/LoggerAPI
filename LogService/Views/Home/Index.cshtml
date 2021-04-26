@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+
+    FileDetail errorDetail = ViewBag.ErrorCount;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <ul class="form-control">
+        @*@foreach (var item in ViewBag.Errors)
+            {
+                <li>@item</li>
+            }*@
+        <li>Number of Duplicate Errors: @errorDetail.NumberOfDuplicateErrors</li>
+        <li>Number of Unique Errors: @errorDetail.NumberOfUniqueErrors</li>
+
+    </ul>
+</div>
